@@ -6,9 +6,7 @@ services:
 
 before_install:
   - docker build -t irusio/fibbonacci -f Dockerfile.dev1 .
-
 script:
-  - docker images
   - docker run -e CI=true irusio/fibbonacci npm run test
 
 deploy:
