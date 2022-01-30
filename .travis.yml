@@ -8,6 +8,7 @@ before_install:
   - docker build -t irusio/fibonnaci -f Dockerfile .
 
 script:
+  - docker images
   - docker run -e CI=true irusio/fibbonacci npm run test
 
 deploy:
